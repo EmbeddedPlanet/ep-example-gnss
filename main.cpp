@@ -21,16 +21,17 @@
  */
 #include "mbed.h"
 
-#include "TELIT_ME910_GNSS.h"
 #include "mbed_trace.h"
 
 #define TRACE_GROUP   "MAIN"
 
-using namespace ep;
-
 #if TELIT_ME910_GNSS_ENABLED
+#include "TELIT_ME910_GNSS.h"
+using namespace ep;
 using gnss_type = TELIT_ME910_GNSS;
 #elif TELIT_ME310_GNSS_ENABLED
+#include "TELIT_ME310_GNSS.h"
+using namespace ep;
 using gnss_type = TELIT_ME310_GNSS;
 #endif
 
@@ -45,7 +46,7 @@ int main()
 #endif
 
     tr_info("***************************************");
-    tr_info("* Embedded Planet GNSS Example v0.1.0 *");
+    tr_info("* Embedded Planet GNSS Example v0.1.1 *");
     tr_info("***************************************");
 
     // GNSS object

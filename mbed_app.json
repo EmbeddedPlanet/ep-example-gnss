@@ -18,6 +18,8 @@
         },
         "EP_ATLAS": {
             "telit-me310-gnss.enabled": true,
+            "ppp.enabled": false,
+            "cellular.offload-dns-queries": true,
             "ep-atlas.enable-usb-stdio-console": true
         }
     }
